@@ -6,7 +6,7 @@
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:20:53 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/01 22:22:59 by alla             ###   ########.fr       */
+/*   Updated: 2026/10/01 23:13:18 by alla             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ size_t	ft_strlcat(char *dst, char *src, size_t dsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
 
 #endif

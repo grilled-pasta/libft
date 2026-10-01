@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alla <alkonsta@student.codam.nl>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/01 22:15:15 by alla              #+#    #+#             */
-/*   Updated: 2026/10/01 23:16:50 by alla             ###   ########.fr       */
+/*   Created: 2026/10/01 23:03:46 by alla              #+#    #+#             */
+/*   Updated: 2026/10/01 23:17:00 by alla             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strrchr(char *s, int c)
 {
 	int	i;
+	int	s_length;
 
-	i = 0;
-	while (s[i])
+	s_length = ft_strlen(s);
+	i = s_length;
+	while (i >= 0)
 	{
 		if (s[i] == (char) c)
 			return (&s[i]);
-		i++;
+		i--;
 	}
-	if ((char) c == '\0')
-		return (&s[i]);
 	return (NULL);
 }
-
+//
 // #include <stdio.h>
 //
 // int	main(void)
 // {
-// 	printf("%s", ft_strchr("abcd", '\0'));
+// 	printf("%s\n", ft_strrchr("acbbccde", 'c'));
 // }
