@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	return (((int) c >= 32) && ((int) c <= 127));
+	return (((int) c >= 32) && ((int) c <= 126));
 }
 //
 // #include <unistd.h>

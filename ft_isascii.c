@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
-	return (((int) c >= 0) && ((int) c <= 127));
+	return (c >= 0 && c <= 127);
 }
 
 // #include <unistd.h>

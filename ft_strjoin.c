@@ -23,7 +23,6 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (NULL);
 	ft_strlcpy(res, s1, ft_strlen(s1));
 	ft_strlcpy(res + ft_strlen(s1), s2, ft_strlen(s2));
-	
 	return (res);
 }
 

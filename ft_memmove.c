@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	buffer[sizeof(src)] = {0};
-	size_t		i;
+	char	buffer[sizeof(src)];
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -29,7 +29,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		((char *) dest)[i] = buffer[i];
 		i++;
 	}
-
 	return (dest);
 }
 

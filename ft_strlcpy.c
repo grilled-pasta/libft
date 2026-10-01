@@ -22,12 +22,11 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size)
 	if (size == 0)
 		return (src_length);
 	i = 0;
-	while (i < size && src[i])
+	while (i < size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-
 	return (src_length);
 }
