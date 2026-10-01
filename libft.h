@@ -6,7 +6,7 @@
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:20:53 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/01 23:13:18 by alla             ###   ########.fr       */
+/*   Updated: 2026/10/02 01:10:34 by alla             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int		ft_tolower(int c);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 void	*ft_memchr(void *s, int c, size_t n);
+char	*ft_strnstr(char *big, char *little, size_t len);
 
 #endif
