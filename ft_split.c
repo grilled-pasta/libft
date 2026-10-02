@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s == c)
 			s++;
+		if (!*s)
+			break ;
 		res[i] = gen_substr(&s, c);
 		if (!res[i])
 		{
