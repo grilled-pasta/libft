@@ -21,7 +21,7 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 
 	s_length = ft_strlen(s);
 	res = (char *) malloc(len + 1);
-	ft_strlcpy(res, s + start, len);
+	ft_strlcpy(res, s + start, len + 1);
 	return (res);
 }
 //
