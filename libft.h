@@ -6,7 +6,7 @@
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:20:53 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/02 18:35:39 by alkonsta         ###   ########.fr       */
+/*   Updated: 2026/10/02 20:13:03 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void	*ft_calloc(size_t n, size_t size);
 char	*ft_strdup(char *s);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 char	*ft_strjoin(char *s1, char *s2);
+char	**ft_split(char const *s, char c);
 
 #endif
