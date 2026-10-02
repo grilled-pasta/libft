@@ -6,7 +6,7 @@
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 12:20:53 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/02 02:16:24 by alla             ###   ########.fr       */
+/*   Updated: 2026/10/02 02:27:37 by alla             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int		ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(void *s, int c, size_t n);
 char	*ft_strnstr(char *big, char *little, size_t len);
 int		ft_atoi(char *nptr);
+void	*ft_calloc(size_t n, size_t size);
 
 #endif
