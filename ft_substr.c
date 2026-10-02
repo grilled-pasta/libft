@@ -20,8 +20,14 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	char	*res;
 
 	s_length = ft_strlen(s);
-	res = (char *) malloc(len + 1);
-	ft_strlcpy(res, s + start, len + 1);
+	if (start > s_length)
+		start = s_length;
+	if (s_length > len)
+		s_length = len;
+	res = (char *) malloc(s_length + 1);
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, s + start, s_length + 1);
 	return (res);
 }
 //

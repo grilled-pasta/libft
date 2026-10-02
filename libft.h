@@ -37,5 +37,6 @@ char	*ft_strnstr(char *big, char *little, size_t len);
 int		ft_atoi(char *nptr);
 void	*ft_calloc(size_t n, size_t size);
 char	*ft_strdup(char *s);
+char	*ft_substr(char *s, unsigned int start, size_t len);
 
 #endif
