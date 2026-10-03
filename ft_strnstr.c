@@ -13,13 +13,13 @@
 #include <stddef.h>
 #include "libft.h"
 
-char	*ft_strnstr(char *big, char *little, size_t len)
+char	*ft_strnstr(char const *big, char const *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	if (!*little)
-		return (big);
+		return ((char *) big);
 	i = 0;
 	while (i < len && big[i])
 	{
@@ -27,7 +27,7 @@ char	*ft_strnstr(char *big, char *little, size_t len)
 		while (i + j < len && little[j] && big[i + j] == little[j])
 			j++;
 		if (!little[j])
-			return (big + i);
+			return ((char *)(big + i));
 		i++;
 	}
 	return (NULL);
