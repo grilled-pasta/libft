@@ -6,7 +6,7 @@
 #    By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/03 13:24:25 by alkonsta          #+#    #+#              #
-#    Updated: 2026/10/03 13:30:40 by alkonsta         ###   ########.fr        #
+#    Updated: 2026/10/03 18:34:23 by alkonsta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,9 @@ SRCS = ft_isalpha.c \
        ft_strjoin.c \
        ft_strtrim.c \
        ft_split.c \
-       ft_itoa.c
+       ft_itoa.c \
+       ft_strmapi.c \
+       ft_striteri.c
 
 OBJDIR = ./libft
 OBJS = $(SRCS:.c=.o)
