@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, char const *src, size_t size);
 size_t	ft_strlcat(char *dst, char *src, size_t dsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*ft_strchr(char *s, int c);
+char	*ft_strchr(char const *s, int c);
 char	*ft_strrchr(char *s, int c);
 int		ft_strncmp(char *s1, char *s2, size_t n);
 void	*ft_memchr(void *s, int c, size_t n);

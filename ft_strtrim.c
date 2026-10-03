@@ -14,20 +14,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	contains(char s, char const *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (s == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -35,10 +21,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 
 	start = 0;
-	while (s1 && contains(s1[start], set))
+	while (s1 && ft_strchr(set, s1[start]))
 		start++;
 	end = ft_strlen(s1);
-	while (end > start && contains(s1[end - 1], set))
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	res = (char *) malloc(end - start + 1);
 	if (!res)
@@ -46,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(res, s1 + start, end - start + 1);
 	return (res);
 }
-//
+
 // #include <stdio.h>
 //
 // int	main(void)
