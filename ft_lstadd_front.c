@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 18:44:49 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/04 18:07:10 by alkonsta         ###   ########.fr       */
+/*   Created: 2026/10/04 18:55:40 by alkonsta          #+#    #+#             */
+/*   Updated: 2026/10/04 19:24:57 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	if (*lst)
+		new->next = *lst;
+	*lst = new;
 }
-
+//
 // int	main(void)
 // {
-// 	ft_putchar_fd('a', 1);
+// 	t_list	*list;
+// 	t_list	*temp;
+//
+// 	list = ft_lstnew("B");
+// 	ft_lstadd_front(&list, ft_lstnew("A"));
+// 	temp = list;
+//
+// 	while (temp)
+// 	{
+// 		printf("%s,\t", (char *) temp->content);
+// 		temp = temp->next;
+// 	}
 // }

@@ -1,23 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 18:44:49 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/04 18:07:10 by alkonsta         ###   ########.fr       */
+/*   Created: 2026/10/04 19:24:05 by alkonsta          #+#    #+#             */
+/*   Updated: 2026/10/04 19:28:00 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+int		ft_lstsize(t_list *lst)
 {
-	write(fd, &c, 1);
+	int		size;
+
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst->next;
+	}
+	return (size);
 }
 
+// #include <stdio.h>
+//
 // int	main(void)
 // {
-// 	ft_putchar_fd('a', 1);
+// 	t_list	*list;
+//
+// 	list = ft_lstnew("C");
+// 	ft_lstadd_front(&list, ft_lstnew("B"));
+// 	ft_lstadd_front(&list, ft_lstnew("A"));
+//
+// 	printf("%d", ft_lstsize(list));
 // }

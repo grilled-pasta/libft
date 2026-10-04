@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 18:44:49 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/04 18:07:10 by alkonsta         ###   ########.fr       */
+/*   Created: 2026/10/04 19:28:45 by alkonsta          #+#    #+#             */
+/*   Updated: 2026/10/04 19:36:59 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+t_list	*ft_lstlast(t_list *lst)
 {
-	write(fd, &c, 1);
+	while (lst && lst->next)
+		lst = lst->next;
+	return (lst);
 }
 
+// #include <stdio.h>
+//
 // int	main(void)
 // {
-// 	ft_putchar_fd('a', 1);
+// 	t_list	*lst;
+//
+// 	lst = ft_lstnew("C");
+// 	ft_lstadd_front(&lst, ft_lstnew("B"));
+// 	ft_lstadd_front(&lst, ft_lstnew("A"));
+// 	t_list *last = ft_lstlast(lst);
+// 	printf("%s", (char *) last->content);
 // }

@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/03 18:44:49 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/04 18:07:10 by alkonsta         ###   ########.fr       */
+/*   Created: 2026/10/04 20:57:30 by alkonsta          #+#    #+#             */
+/*   Updated: 2026/10/04 21:11:33 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	write(fd, &c, 1);
-}
+	t_list	*res;
+	t_list	*temp;
 
-// int	main(void)
-// {
-// 	ft_putchar_fd('a', 1);
-// }
+	res = NULL;
+	while (lst)
+	{
+		temp = ft_lstnew(f(lst->content));
+		if (!temp)
+		{
+			ft_lstclear(&res, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&res, temp);
+		lst = lst->next;
+	}
+	return (res);
+}

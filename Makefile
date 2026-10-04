@@ -6,7 +6,7 @@
 #    By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/03 13:24:25 by alkonsta          #+#    #+#              #
-#    Updated: 2026/10/04 18:02:38 by alkonsta         ###   ########.fr        #
+#    Updated: 2026/10/04 21:10:09 by alkonsta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,16 @@ SRCS = ft_isalpha.c \
        ft_putchar_fd.c \
        ft_putstr_fd.c \
        ft_putendl_fd.c \
-       ft_putnbr_fd.c
+       ft_putnbr_fd.c \
+       ft_lstnew.c \
+       ft_lstadd_front.c \
+       ft_lstsize.c \
+       ft_lstlast.c \
+       ft_lstadd_back.c \
+       ft_lstdelone.c \
+       ft_lstclear.c \
+       ft_lstiter.c \
+       ft_lstmap.c
 
 OBJDIR = ./libft
 OBJS = $(SRCS:.c=.o)
@@ -61,6 +70,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: $(NAME)
+
 clean:
 	rm -f $(OBJS)
 
@@ -68,5 +79,12 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+# so:
+# 	$(CC) -fPIC $(CFLAGS) $(SRCS)
+# 	gcc -shared -o libft.so $(OBJS)
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 .PHONY: all clean fclean re
