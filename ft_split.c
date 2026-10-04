@@ -12,116 +12,101 @@
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
-static int	count_s(char const *s, char c)
+static	int	count_words(char const *s, char c)
 {
-	int	i;
-	int	size;
+	int	w_count;
 
-	i = 0;
-	size = 0;
-	while (s[i])
+	w_count = 0;
+	while (*s)
 	{
-		if (s[i] != c)
-		{
-			size++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
-		i++;
+		while (*s && *s == c)
+			s++;
+		if (*s)
+			w_count++;
+		while (*s && *s != c)
+			s++;
 	}
-	return (size);
+	return (w_count);
 }
 
-static void	free_arr(char **s, int size)
+static	int	next_word_length(char const *s, char c)
 {
-	while (size > 0)
+	int	length;
+
+	length = 0;
+	while (*s && *s == c)
+		s++;
+	while (*s && *s != c)
 	{
-		size--;
-		free(s[size]);
+		length++;
+		s++;
 	}
-	free(s);
+	return (length);
 }
 
-static	char	*gen_substr(char const **s, char c)
+static	void	free_str_array(char **arr, int size)
 {
-	char	*res;
-	int		size;
-
-	size = 0;
-	while ((*s)[size] && (*s)[size] != c)
-		size++;
-	res = (char *) malloc(size + 1);
-	if (!res)
-		return (NULL);
-	ft_strlcpy(res, *s, size + 1);
-	*s += size;
-	return (res);
+	while (size-- > 0)
+		free(arr[size]);
+	free(arr);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
+	int		count_w;
 	int		i;
-	int		size;
 
-	size = count_s(s, c);
-	res = (char **) malloc(sizeof(char *) * (size + 1));
+	count_w = count_words(s, c);
+	res = (char **) malloc((count_w + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
 	i = 0;
 	while (*s)
 	{
-		while (*s == c)
+		while (*s && *s == c)
 			s++;
 		if (!*s)
 			break ;
-		res[i] = gen_substr(&s, c);
+		res[i] = (char *) malloc((next_word_length(s, c) + 1) * sizeof(char));
 		if (!res[i])
-		{
-			free_arr(res, i);
-			return (NULL);
-		}
+			return (free_str_array(res, i), NULL);
+		ft_strlcpy(res[i], s, next_word_length(s, c) + 1);
+		while (*s && *s != c)
+			s++;
 		i++;
 	}
-	res[i] = NULL;
+	res[count_w] = NULL;
 	return (res);
 }
-
-// #include <stdio.h>
+// #include <unistd.h>
 //
-// void	test(char *s, char c)
+// void	ft_print_result(char const *s)
 // {
-// 	char	**res;
-// 	int		i;
+// 	int		len;
+// 	char	tab;
 //
-// 	i = 0;
-// 	res = ft_split(s, c);
-// 	while (res[i])
-// 	{
-// 		printf("[%s],", res[i]);
-// 		i++;
-// 	}
-// 	printf("\n");
-// 	i = 0;
-// 	while (res[i])
-// 	{
-// 		free(res[i]);
-// 		i++;
-// 	}
-// 	free(res);
+// 	len = 0;
+// 	tab = '\t';
+// 	while (s[len])
+// 		len++;
+// 	write(1, s, len);
+// 	write(1, &tab, 1);
 // }
 //
 // int	main(void)
 // {
-// 	test("a,b,c,d,e,f,", ',');
-// 	test(",a,b,c", ',');
-// 	test("a,b,c,", ',');
-// 	test(",a,b,c,", ',');
-// 	test("a,,b,,c", ',');
-// 	test(",,,", ',');
-// 	test("", ',');
-// 	test("abc", ',');
-// 	test("abc", 'x');
+// 	char	**res;
+// 	int		i;
+//
+// 	res = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit.
+// 	Sed non risus. Suspendisse", ' ');
+// 	i = 0;
+// 	while (res[i])
+// 	{
+// 		ft_print_result(res[i]);
+// 		i++;
+// 	}
+//
 // }
