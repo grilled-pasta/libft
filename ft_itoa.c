@@ -6,12 +6,11 @@
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 21:33:57 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/02 22:39:38 by alkonsta         ###   ########.fr       */
+/*   Updated: 2026/10/04 17:59:56 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 static	int	count_n(long n)
 {
