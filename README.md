@@ -26,12 +26,52 @@ Checks whether `c` is an alphabetic character.
 ##### Parameters
 - `c` - character to check.
 ##### Returns
-- `1` if `c` is alphabetic, otherwise `0` 
-##### Example
+- `1` if `c` is alphabetic
+- `0` if `c` is NOT alphabetic
+
+#### `ft_isdigit`
 ```c
-ft_isalpha('A'); // 1
-ft_isalpha('7'); // 0
+int ft_isdigit(int c);
 ```
+Checks whether `c` is a digit (0 to 9).
+##### Parameters
+- `c` - character to check.
+##### Returns
+- `1` if `c` is digit
+- `0` if `c` is NOT digit
+
+#### `ft_isalnum`
+```c
+int ft_isalnum(int c);
+```
+Checks whether `c` is an alphanumeric character.
+##### Parameters
+- `c` - character to check.
+##### Returns
+- `1` if `c` is alphanumeric
+- `0` if `c` is NOT alphanumeric
+
+#### `ft_isascii`
+```c
+int ft_isascii(int c);
+```
+Checks whether `c` fits into the ASCII character set.
+##### Parameters
+- `c` - character to check.
+##### Returns
+- `1` if `c` is ASCII character
+- `0` if `c` is NOT ASCII character
+
+#### `ft_isprint`
+```c
+int ft_isprint(int c);
+```
+Checks whether `c` is a printable character including space.
+##### Parameters
+- `c` - character to check.
+##### Returns
+- `1` if `c` is printable character
+- `0` if `c` is NOT printable character
 
 #### `ft_strlen`
 ```c
@@ -42,10 +82,5 @@ Returns the number of characters in the null-terminated string `s`, excluding th
 - `s` - string to measure.
 ##### Returns
 - Number of characters in `s`.
-##### Example
-```c
-ft_strlen("Hello"); //5
-```
 ##### Notes
-- `s` must point to a valid null-terminated string.
-- Passing `NULL` results in undefined behavior.
+Passing `NULL` or a string that is not null-terminated results in undefined behavior.
