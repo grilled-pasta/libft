@@ -6,7 +6,7 @@
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 13:14:41 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/09/30 14:18:53 by alkonsta         ###   ########.fr       */
+/*   Updated: 2026/10/06 23:21:07 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
 	while (i < n)
 	{
 		((char *) dest)[i] = ((char *) src)[i];
