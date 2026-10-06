@@ -22,7 +22,7 @@ static	int	test_case(int c)
 
 	if ((res != 0) != (lib_res != 0))
 	{
-		printf(RED "FAIL: ft_isdigit(%d) -> %d, expected %d\n RESET",
+		printf(RED "FAIL: ft_isdigit(%d) -> %d, expected %d\n" RESET,
 				c, res, lib_res);
 		return (1);
 	}

@@ -13,7 +13,7 @@
 NAME = custom
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -lbsd
+CFLAGS = -Wall -Wextra -Werror
 
 LIBFT_DIR = ../..
 LIBFT = $(LIBFT_DIR)/libft.a

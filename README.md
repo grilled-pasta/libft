@@ -87,11 +87,11 @@ Returns the number of characters in the null-terminated string `s`, excluding th
 ```c 
 void	*ft_memset(void *s, int c, size_t n);
 ```
-Fills the first `n` bytes of the memory area pointed to by `s` with the byte `c`.
+Copies the value `(unsigned char) c` into each of the first `n` bytes of the memory area pointed to by `s`.
 ##### Parameters
-- `s` - pointer to the memory area to fill.
-- `c` - the byte value to fill.
-- `n` - the number of bytes in the memory to fill.
+- `s` - pointer to the memory to fill.
+- `c` - fill byte.
+- `n` - number of bytes to fill.
 ##### Returns
-- A pointer to the memory area `s`.
-
+- A pointer to `s`.
+> Passing `NULL` or if `n` is greater than the length of `s` results in undefined behavior.

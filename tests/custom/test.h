@@ -17,6 +17,8 @@
 # include <stdio.h>
 # include <ctype.h>
 # include <stdlib.h>
+# include <stddef.h>
+# include <string.h>
 # include <bsd/string.h>
 
 # define GREEN "\033[32m"
@@ -29,5 +31,6 @@ void	test_isalnum(void);
 void	test_isascii(void);
 void	test_isprint(void);
 void	test_strlen(void);
+void	test_memset(void);
 
 #endif

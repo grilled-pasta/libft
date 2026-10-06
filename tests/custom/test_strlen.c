@@ -22,7 +22,7 @@ static	int	test_case(char *s)
 
 	if (res != lib_res)
 	{
-		printf(RED "FAIL: ft_strlen(%s) -> %ld, expected %ld\n RESET",
+		printf(RED "FAIL: ft_strlen(%s) -> %ld, expected %ld\n" RESET,
 				s, res, lib_res);
 		return (1);
 	}
