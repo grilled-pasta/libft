@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = my_tests
+NAME = custom
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -lbsd
