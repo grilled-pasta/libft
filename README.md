@@ -82,5 +82,4 @@ Returns the number of characters in the null-terminated string `s`, excluding th
 - `s` - string to measure.
 ##### Returns
 - Number of characters in `s`.
-##### Notes
-Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
