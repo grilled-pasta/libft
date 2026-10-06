@@ -124,7 +124,7 @@ Copies the first `n` bytes from the memory area pointed to by `(unsigned char *)
 ```c 
 void	*ft_memmove(void *dest, const void *src, size_t n);
 ```
-Copies the first `n` bytes from the memory area pointed to by `(unsigned char *) src` to the memory area pointed to by `(unsigned char *) dest`. *The objects may overlap*.
+Copies the first `n` bytes from the memory area pointed to by `(unsigned char *) src` to the memory area pointed to by `(unsigned char *) dest`. *The memory areas may overlap*.
 ##### Parameters
 - `dest` - pointer to the memory area to copy to.
 - `src` - pointer to the memory area to copy from.
