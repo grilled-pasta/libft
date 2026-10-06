@@ -21,6 +21,7 @@ int	main(void)
 	test_isprint();
 	test_strlen();
 	test_memset();
-	
+	test_bzero();
+
 	return (0);
 }

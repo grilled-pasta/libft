@@ -1,53 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_memset.c                                      :+:      :+:    :+:   */
+/*   test_bzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alkonsta <alkonsta@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 21:26:55 by alkonsta          #+#    #+#             */
-/*   Updated: 2026/10/06 23:13:04 by alkonsta         ###   ########.fr       */
+/*   Created: 2026/10/06 22:34:24 by alkonsta          #+#    #+#             */
+/*   Updated: 2026/10/06 22:49:05 by alkonsta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-static	int	test_case(char *s, int c, size_t n)
+static	int	test_case(void *s, size_t n)
 {
-	char	*s1;
-	char	*s2;
 	void	*res;
 	void	*lib_res;
 
-	s1 = strdup(s);
-	s2 = strdup(s);
-	res = ft_memset(s1, c, n);
-	lib_res = memset(s2, c, n);
+	res = strdup((char *) s);
+	lib_res = strdup((char *) s);
+	ft_bzero(res, n);
+	bzero(lib_res, n);
 
 	if (memcmp(res, lib_res, n) != 0)
 	{
-		printf(RED "FAIL: ft_memset(%s) -> %s, expected %s\n" RESET,
+		printf(RED "FAIL: ft_bzero(%s) -> %s, expected %s\n" RESET,
 				(char *) s, (char *) res, (char *) lib_res);
 		return (1);
 	}
-	free(s1);
-	free(s2);
 	return (0);
 }
 
 
-void	test_memset(void)
+void	test_bzero(void)
 {
 	int		failed;
 	char	test[6] = {'a', 'b', 'c', '\0', 'd', '\0'};
 
 	failed = 0;
-	printf("\n=== ft_memset ===\n");
-	if (test_case("abcdefg", 67, 4))
+	printf("\n=== ft_bzero ===\n");
+	if (test_case("abcdefg", 4))
 		failed++;
-	if (test_case("abcd", 67, 1))
+	if (test_case("abcd", 1))
 		failed++;
-	if (test_case(test, 67, 6))
+	if (test_case(test, 6))
 		failed++;
 
 	if (failed == 0)
@@ -55,3 +51,4 @@ void	test_memset(void)
 	else
 		printf(RED "FAIL: %d test(s) failed\n" RESET, failed);
 }
+
