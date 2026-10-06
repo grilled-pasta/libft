@@ -3,8 +3,9 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 ## Description
 ## Instructions
 ## Resources
-[Beej's Guide to C Programming](https://beej.us/guide/bgc/)
+[Beej's Guide to C Programming](https://beej.us/guide/bgc/)  
 [C Reference](https://en.cppreference.com/c/)
+
 ## Library
 ### Libc functions
 
@@ -98,7 +99,7 @@ Copies the value `(unsigned char) c` into each of the first `n` bytes of the mem
 > Passing `NULL` or if `n` is greater than the length of `s` results in undefined behavior.
 #### `ft_bzero`
 ```c 
-void	*ft_bzero(void *s. size_t n);
+void	ft_bzero(void *s. size_t n);
 ```
 Writes `0` into each of the first `n` bytes of the memory area pointed to by `s`. Equivalent to `ft_memset(a, '\0', n).`
 ##### Parameters
@@ -119,4 +120,15 @@ Copies the first `n` bytes from the memory area pointed to by `(unsigned char *)
 ##### Returns
 - A pointer to `dest`.
 > Passing `NULL` or if `n` is greater than the length of `dest` results in undefined behavior.
-
+#### `ft_memmove`
+```c 
+void	*ft_memmove(void *dest, const void *src, size_t n);
+```
+Copies the first `n` bytes from the memory area pointed to by `(unsigned char *) src` to the memory area pointed to by `(unsigned char *) dest`. *The objects may overlap*.
+##### Parameters
+- `dest` - pointer to the memory area to copy to.
+- `src` - pointer to the memory area to copy from.
+- `n` - number of bytes to copy.
+##### Returns
+- A pointer to `dest`.
+> Passing `NULL` or if `n` is greater than the size of `dest` or `src` results in undefined behavior.

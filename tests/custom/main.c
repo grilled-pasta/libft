@@ -23,6 +23,7 @@ int	main(void)
 	test_memset();
 	test_bzero();
 	test_memcpy();
+	test_memmove();
 
 	return (0);
 }
