@@ -1,0 +1,8 @@
+libft.a
+*.o
+
+# Local modifications to testing submodules
+/tests/libft-unit-test
+/tests/libft-war-machine
+/tests/libftTester
+/tests/my_tests/my_tests
