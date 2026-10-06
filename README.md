@@ -26,8 +26,8 @@ Checks whether `c` is an alphabetic character.
 ##### Parameters
 - `c` - character to check.
 ##### Returns
-- `1` if `c` is alphabetic
-- `0` if `c` is NOT alphabetic
+- `1` if `c` is alphabetic.
+- `0` if `c` is NOT alphabetic.
 
 #### `ft_isdigit`
 ```c
@@ -37,8 +37,8 @@ Checks whether `c` is a digit (0 to 9).
 ##### Parameters
 - `c` - character to check.
 ##### Returns
-- `1` if `c` is digit
-- `0` if `c` is NOT digit
+- `1` if `c` is digit.
+- `0` if `c` is NOT digit.
 
 #### `ft_isalnum`
 ```c
@@ -48,8 +48,8 @@ Checks whether `c` is an alphanumeric character.
 ##### Parameters
 - `c` - character to check.
 ##### Returns
-- `1` if `c` is alphanumeric
-- `0` if `c` is NOT alphanumeric
+- `1` if `c` is alphanumeric.
+- `0` if `c` is NOT alphanumeric.
 
 #### `ft_isascii`
 ```c
@@ -59,8 +59,8 @@ Checks whether `c` fits into the ASCII character set.
 ##### Parameters
 - `c` - character to check.
 ##### Returns
-- `1` if `c` is ASCII character
-- `0` if `c` is NOT ASCII character
+- `1` if `c` is ASCII character.
+- `0` if `c` is NOT ASCII character.
 
 #### `ft_isprint`
 ```c
@@ -70,8 +70,8 @@ Checks whether `c` is a printable character including space.
 ##### Parameters
 - `c` - character to check.
 ##### Returns
-- `1` if `c` is printable character
-- `0` if `c` is NOT printable character
+- `1` if `c` is printable character.
+- `0` if `c` is NOT printable character.
 
 #### `ft_strlen`
 ```c
@@ -83,3 +83,15 @@ Returns the number of characters in the null-terminated string `s`, excluding th
 ##### Returns
 - Number of characters in `s`.
 > Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_memset`
+```c 
+void	*ft_memset(void *s, int c, size_t n);
+```
+Fills the first `n` bytes of the memory pointed to by `s` with the byte `c`.
+##### Parameters
+- `s` - pointer to the memory to fill.
+- `c` - the byte value to fill.
+- `n` - the number of bytes in the memory to fill.
+##### Returns
+- A pointer to the memory area `s`.
+
