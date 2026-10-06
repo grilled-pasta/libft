@@ -22,6 +22,7 @@ int	main(void)
 	test_strlen();
 	test_memset();
 	test_bzero();
+	test_memcpy();
 
 	return (0);
 }

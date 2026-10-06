@@ -33,5 +33,6 @@ void	test_isprint(void);
 void	test_strlen(void);
 void	test_memset(void);
 void	test_bzero(void);
+void	test_memcpy(void);
 
 #endif
