@@ -12,19 +12,16 @@
 
 #include <stddef.h>
 
-char	*ft_strchr(char const *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == (char) c)
-			return ((char *) &s[i]);
-		i++;
+		if (*s == (unsigned char) c)
+			return ((char *) s);
+		s++;
 	}
-	if ((char) c == '\0')
-		return ((char *) &s[i]);
+	if ((unsigned char) c == '\0')
+		return ((char *) s);
 	return (NULL);
 }
 

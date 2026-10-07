@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	int	s_length;
+	const char	*last;
 
-	s_length = ft_strlen(s);
-	i = s_length;
-	while (i >= 0)
+	last = NULL;
+	while (*s)
 	{
-		if (s[i] == (char) c)
-			return (&s[i]);
-		i--;
+		if (*s == (unsigned char) c)
+			last = s;
+		s++;
 	}
-	return (NULL);
+	if ((unsigned char) c == '\0')
+		last = s;
+	return ((char *) last);
 }
+
 //
 // #include <stdio.h>
 //

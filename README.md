@@ -132,3 +132,153 @@ Copies the first `n` bytes from the memory area pointed to by `(unsigned char *)
 ##### Returns
 - A pointer to `dest`.
 > Passing `NULL` or if `n` is greater than the size of `dest` or `src` results in undefined behavior.
+#### `ft_strlcpy`
+```c 
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+```
+Copies the string pointed to by `src`, into a string at the buffer pointed to by `dst`. If the string doesn't fit in the buffer, it is truncated.
+##### Parameters
+- `dest` - pointer to the string to copy to.
+- `src` - pointer to the string to copy from.
+- `n` - number of characters to copy, including the byte for NULL-termination.
+##### Returns
+- The total length of the string they tried to create, as if truncation didn't happen. 
+> Passing `NULL` results in undefined behavior.
+#### `ft_strlcat`
+```c 
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+```
+Catenates the string pointed to by `src`, after the string pointed to by `dst` (overwriting its terminating null byte). If the string doesn't fit in the buffer, it is truncated.
+##### Parameters
+- `dest` - pointer to the string to copy to.
+- `src` - pointer to the string to copy from.
+- `n` - number of characters to copy, including the byte for NULL-termination.
+##### Returns
+- The total length of the string they tried to create, as if truncation didn't happen. 
+> Passing `NULL` results in undefined behavior.
+#### `ft_toupper`
+```c 
+int	ft_toupper(int c);
+```
+Converts the given character to uppercase.
+##### Parameters
+- `c` - character to check.
+##### Returns
+- Uppercase version of `c` or unmodified `c` if there is no uppercase version.
+> Passing a value of `c` that is not representable as `unsigned char` or it doesn't equal `EOF` results in undefined behavior.
+#### `ft_tolower`
+```c 
+int	ft_tolower(int c);
+```
+Converts the given character to lowercase.
+##### Parameters
+- `c` - character to check.
+##### Returns
+- Lowercase version of `c` or unmodified `c` if there is no lowercase version.
+> Passing a value of `c` that is not representable as `unsigned char` or it doesn't equal `EOF` results in undefined behavior.
+#### `ft_strchr`
+```c 
+int	ft_strchr(int c);
+```
+Searches for the first occurance of a `(unsigned char) c` within the string `s`.
+##### Parameters
+- `s` - pointer to the string to analyze.
+- `c` - character to search for.
+##### Returns
+- A pointer to the first occurance of the matched character or `NULL` if it was not found.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior. 
+#### `ft_strrchr`
+```c 
+int	ft_strrchr(int c);
+```
+Searches for the last occurance of `(unsigned char) c` within the string `s`.
+##### Parameters
+- `s` - pointer to the string to analyze.
+- `c` - character to search for.
+##### Returns
+- A pointer to the last occurance of the matched character or `NULL` if it was not found.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior. 
+#### `ft_strncmp`
+```c 
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+```
+Compares at most `n` characters of the two strings `s1` and `s2`. Characters following `\0` are not compared.
+##### Parameters
+- `s1` - pointer to the firs string.
+- `s2` - pointer to the second string.
+- `n` - maximum number of characters to compare.
+##### Returns
+- The difference between the values of the first pair of `(unsigned char)` characters that differ in the strings.
+> Passing `NULL` results in undefined behavior. 
+#### `ft_memchr`
+```c 
+void	*ft_memchr(const void *s, int c, size_t n);
+```
+Searches the initial `n` bytes of the memory area pointed to by `s` for the first occurance of `(unsigned char) c`.
+##### Parameters
+- `s` - pointer to the memory area to analyze.
+- `c` - character to search for.
+- `n` - maximum number of bytes to scan.
+##### Returns
+- A pointer to the matching byte or `NULL` if it was not found.
+> Passing `NULL` or `n` that is larger than the memory area results in undefined behavior. #### `ft_memcmp`
+```c 
+void	*ft_memcmp(const void *s1, const void *s2, size_t n);
+```
+Compares the initial `n` bytes of the memory areas pointed to by `s1` and `s2`.
+##### Parameters
+- `s1` - pointer to the first memory area to analyze.
+- `s2` - pointer to the second memory area to analyze.
+- `n` - maximum number of bytes to scan.
+##### Returns
+- `0` if the first `n` bytes match.
+- `<0` if the first `n` bytes of `s1` are less than the first `n` bytes of `s2`.
+- `>0` if the first `n` bytes of `s1` are greater than the first `n` bytes of `s2`.
+> Passing `NULL` or `n` that is larger than the memory area results in undefined behavior.
+#### `ft_strnstr`
+```c 
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+```
+Locates the first occurance of the string `little` in the initial `n` characters of the  string `big`.
+##### Parameters
+- `big` - pointer to the string to analyze.
+- `little` - pointer to the string to find.
+- `n` - maximum number of characters to scan.
+##### Returns
+- Pointer to the first character of the first occurance of `little`, or `NULL` if not found.
+- If `little` is an empty string, `big` is returned.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_atoi`
+```c 
+int	ft_atoi(const char *nptr);
+```
+Converts the initial portion of the string pointed to by `nptr` to `int`. Discard any whitespace characters at the beginning of the string. It takes an optional +/- sign.
+##### Parameters
+- `big` - pointer to the string to analyze.
+- `little` - pointer to the string to find.
+- `n` - maximum number of characters to scan.
+##### Returns
+- The converted value of `nptr`, or `0` on error .
+> If the converted value falls out of `int` range it results in undefined behavior.
+#### `ft_calloc`
+```c 
+void	*ft_calloc(size_t n, size_t size);
+```
+Allocates memory for an array of `n` elements of `size` bytes each. The memory is set to zero. 
+##### Parameters
+- `n` - number of elements.
+- `size` - number of bytes for each element.
+##### Returns
+- Pointer to the allocated memory.
+- If `n` or `size` is 0, then `NULL` is returned.
+> If the multiplication of `n` and `size` results in integer overflow, an error is returned.
+#### `ft_strdup`
+```c 
+char	*ft_strdup(const char *s);
+```
+Duplicates the string pointed to by `s`.
+##### Parameters
+- `s` - pointer to the string to duplicate.
+##### Returns
+- Pointer to the newly allocated string, or `NULL` if an error occured.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
