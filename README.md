@@ -21,8 +21,8 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 | [`ft_bzero`](#ft_bzero) | | | | 
 
 ### Additional functions
-| | |
-|---|---|---|
+| | | |
+|---|---|---|---|
 | [`ft_substr`](#ft_substr) | [`ft_itoa`](#ft_itoa)  | [`ft_putchar_fd`](#ft_putchar_fd) |
 | [`ft_strjoin`](#ft_strjoin) |[`ft_strmapi`](#ft_strmapi) | [`ft_putstr_fd`](#ft_putstr_fd) |
 | [`ft_strtrim`](#ft_strtrim) | [`ft_striteri`](#ft_striteri) | [`ft_putendl_fd`](#ft_putendl_fd)|
