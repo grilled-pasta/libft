@@ -4,7 +4,7 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 ## Instructions
 ## Resources
 [Beej's Guide to C Programming](https://beej.us/guide/bgc/)  
-[C Reference](https://en.cppreference.com/c/)
+[C Reference](https://en.cppreference.com/c)
 
 ## Library
 ### Libc functions
@@ -27,6 +27,13 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 | [`ft_strjoin`](#ft_strjoin) |[`ft_strmapi`](#ft_strmapi) | [`ft_putstr_fd`](#ft_putstr_fd) |
 | [`ft_strtrim`](#ft_strtrim) | [`ft_striteri`](#ft_striteri) | [`ft_putendl_fd`](#ft_putendl_fd)|
 | [`ft_split`](#ft_split) | | [`ft_putnbr_fd`](#ft_putnbr_fd)|
+
+### Linked List
+| | | |
+|---|---|---|
+| [`ft_lstnew`](#ft_lstnew) | [`ft_lstlast`](#ft_lstlast) | [`ft_lstclear`](#ft_lstclear) |
+| [`ft_lstadd_front`](#ft_lstadd_front) | [`ft_lstadd_back`](#ft_lstadd_back) | [`ft_lstiter`](#ft_lstiter) |
+| [`ft_lstsize`](#ft_lstsize) | [`ft_lstdelone`](#ft_lstdelone) | [`ft_lstmap`](#ft_lstmap) |
 
 #### `ft_isalpha`
 ```c
@@ -288,3 +295,4 @@ Duplicates the string pointed to by `s`.
 ##### Returns
 - Pointer to the newly allocated string, or `NULL` if an error occured.
 > Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+
