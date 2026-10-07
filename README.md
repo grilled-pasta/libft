@@ -254,9 +254,7 @@ int	ft_atoi(const char *nptr);
 ```
 Converts the initial portion of the string pointed to by `nptr` to `int`. Discard any whitespace characters at the beginning of the string. It takes an optional +/- sign.
 ##### Parameters
-- `big` - pointer to the string to analyze.
-- `little` - pointer to the string to find.
-- `n` - maximum number of characters to scan.
+- `nptr` - pointer to the string to convert.
 ##### Returns
 - The converted value of `nptr`, or `0` on error .
 > If the converted value falls out of `int` range it results in undefined behavior.
