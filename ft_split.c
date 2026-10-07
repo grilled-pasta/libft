@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (!*s)
 			break ;
-		res[i] = (char *) malloc((next_word_length(s, c) + 1) * sizeof(char));
+		res[i] = (char *) malloc((next_word_length(s, c) + 1));
 		if (!res[i])
 			return (free_str_array(res, i), NULL);
 		ft_strlcpy(res[i], s, next_word_length(s, c) + 1);

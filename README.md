@@ -293,6 +293,125 @@ Duplicates the string pointed to by `s`.
 ##### Parameters
 - `s` - pointer to the string to duplicate.
 ##### Returns
-- Pointer to the newly allocated string, or `NULL` if an error occured.
+- Pointer to the newly allocated string, or `NULL` if allocation fails.
 > Passing `NULL` or a string that is not null-terminated results in undefined behavior.
 
+#### `ft_substr`
+```c 
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+```
+Creates a string that stars at index `start` from the string `s` and has a maximum length of `len`.
+##### Parameters
+- `s` - pointer to the string from which to create the substring.
+- `start` - starting index of the substring within `s`.
+- `len` - maximum length of the substring.
+##### Returns
+- Pointer to the newly allocated substring, or `NULL` if allocation fails.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_strjoin`
+```c 
+char	*ft_strjoin(char const *s1, char const *s2);
+```
+Creates a string which is the result of concatenating `s1` and `s2`.
+##### Parameters
+- `s1` - pointer to the prefix string.
+- `s2` - pointer to the suffix string.
+##### Returns
+- Pointer to the newly allocated string, or `NULL` if allocation fails.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_strtrim`
+```c 
+char	*ft_strtrim(char const *s1, char const *set);
+```
+Creates a string which is a copy of `s1` with characters from `set` removed from the beginning and the end.
+##### Parameters
+- `s1` - pointer to the string to be trimmed.
+- `set` - string containing the set of characters to be removed.
+##### Returns
+- Pointer to the newly allocated string, or `NULL` if allocation fails.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_split`
+```c 
+char	**ft_split(char const *s, char c);
+```
+Creates an array of strings obtained by splitting `s` using the character `c` as a delimiter.
+##### Parameters
+- `s` - pointer to the string to be spit.
+- `c` - character that is used as a delimiter.
+##### Returns
+- Pointer to the array of strings resulting from the split, or `NULL` if allocation fails.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_itoa`
+```c 
+char	*ft_itoa(int n);
+```
+Creates a string representing the integer `n`.
+##### Parameters
+- `n` - the integer to convert.
+##### Returns
+- Pointer to the string representing the integer.
+> Negative numbers must be handled.
+#### `ft_strmapi`
+```c 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+```
+Creates a string that stores the result from applying the function `f` to each character of the string `s`.
+##### Parameters
+- `s` - pointer to the string to iterate over.
+- `f` - pointer to the function to apply to each character.
+##### Returns
+- Pointer to the string created from the successive applications of `f`, or `NULL` if allocation fails.
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_striteri`
+```c 
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+```
+Applies the function `f` to each character of the string `s`. Each character is passed by address to `f` so it can be modified if necessary.
+##### Parameters
+- `s` - pointer to the string to iterate over.
+- `f` - pointer to the function to apply to each character.
+##### Returns
+- Nothing
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_putchar_fd`
+```c 
+void	ft_putchar_fd(char c, int fd);
+```
+Outputs the character `c` to the specified file descriptor `fd`.
+##### Parameters
+- `c` - character to output.
+- `fd` - the file descriptor on which to write.
+##### Returns
+- Nothing
+#### `ft_putstr_fd`
+```c 
+void	ft_putstr_fd(char *s, int fd);
+```
+Outputs the string `s` to the specified file descriptor `fd`.
+##### Parameters
+- `s` - pointer to the string to output.
+- `fd` - the file descriptor on which to write.
+##### Returns
+- Nothing
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_putendl_fd`
+```c 
+void	ft_putendl_fd(char *s, int fd);
+```
+Outputs the string `s` to the specified file descriptor `fd` followed by a newline.
+##### Parameters
+- `s` - pointer to the string to output.
+- `fd` - the file descriptor on which to write.
+##### Returns
+- Nothing
+> Passing `NULL` or a string that is not null-terminated results in undefined behavior.
+#### `ft_putnbr_fd`
+```c 
+void	ft_putnbr_fd(int n, int fd);
+```
+Outputs the integer `n` to the specified file descriptor `fd`.
+##### Parameters
+- `n` - the integer to output.
+- `fd` - the file descriptor on which to write.
+##### Returns
+- Nothing
