@@ -269,7 +269,7 @@ Allocates memory for an array of `n` elements of `size` bytes each. The memory i
 ##### Returns
 - Pointer to the allocated memory.
 - If `n` or `size` is 0, then `NULL` is returned.
-> If the multiplication of `n` and `size` results in integer overflow, an error is returned.
+> If the multiplication of `n` and `size` results in integer overflow, `NULL` is returned.
 #### `ft_strdup`
 ```c 
 char	*ft_strdup(const char *s);
