@@ -10,7 +10,7 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 ### Libc functions
 
 | | | | | 
-|---|---|---|---|
+<!-- |---|---|---|---| -->
 | [`ft_isalpha`](#ft_isalpha) | [`ft_memcpy`](#ft_memcpy) | [`ft_strrchr`](#ft_strrchr) | [`ft_calloc`](#ft_calloc) |
 | [`ft_isdigit`](#ft_isdigit) | [`ft_memmove`](#ft_memmove) | [`ft_strncmp`](#ft_strncmp) | [`ft_strdup`](#ft_strdup) |
 | [`ft_isalnum`](#ft_isalnum) | [`ft_strlcpy`](#ft_strlcpy) | [`ft_memchr`](#ft_memchr) | |
@@ -22,7 +22,7 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 
 ### Additional functions
 | | | |
-|---|---|---|
+<!-- |---|---|---| -->
 | [`ft_substr`](#ft_substr) | [`ft_itoa`](#ft_itoa)  | [`ft_putchar_fd`](#ft_putchar_fd) |
 | [`ft_strjoin`](#ft_strjoin) |[`ft_strmapi`](#ft_strmapi) | [`ft_putstr_fd`](#ft_putstr_fd) |
 | [`ft_strtrim`](#ft_strtrim) | [`ft_striteri`](#ft_striteri) | [`ft_putendl_fd`](#ft_putendl_fd)|
@@ -30,7 +30,7 @@ _This project has been created as part of the 42 curriculum by alkonsta_
 
 ### Linked List
 | | | |
-|---|---|---|
+<!-- |---|---|---| -->
 | [`ft_lstnew`](#ft_lstnew) | [`ft_lstlast`](#ft_lstlast) | [`ft_lstclear`](#ft_lstclear) |
 | [`ft_lstadd_front`](#ft_lstadd_front) | [`ft_lstadd_back`](#ft_lstadd_back) | [`ft_lstiter`](#ft_lstiter) |
 | [`ft_lstsize`](#ft_lstsize) | [`ft_lstdelone`](#ft_lstdelone) | [`ft_lstmap`](#ft_lstmap) |
