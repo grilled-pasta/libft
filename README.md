@@ -415,3 +415,24 @@ Outputs the integer `n` to the specified file descriptor `fd`.
 - `fd` - the file descriptor on which to write.
 ##### Returns
 - Nothing
+
+#### `ft_lstnew`
+```c 
+t_list	*ft_lstnew(void *content);
+```
+Creates a new node. The `content` member variable is initialized with the given parameter `content`. The variable `next` is initialized to `NULL`.
+##### Parameters
+- `content` - content to store in the new node.
+##### Returns
+- Nothing
+#### `ft_lstadd_front`
+```c 
+void	ft_lstadd_front(t_list **lst, t_list *new);
+```
+Adds the node `new` at the beginning of the list.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+- `new` - pointer to the node to be added.
+##### Returns
+- Nothing
+
