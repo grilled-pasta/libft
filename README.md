@@ -1,11 +1,27 @@
 _This project has been created as part of the 42 curriculum by alkonsta_
 # Libft
 ## Description
+A personal `C` library containing commonly used functions from the `C` standard library, together with additional utility functions for string manipulation, memory management, character classification, and linked lists.
 ## Instructions
+### Makefile
+```bash
+make # compiles the library and creates `libft.a`
+make clean # removes object files 
+make fclean # removes object files and the compiled library 
+make re # cleans the project and recompiles everything
+```
+### Usage
+Include the library header:
+```c 
+#include "libft.h"
+```
+Compile the program together with the library
+```bash 
+cc main.c libft.a -Iinclude
+```
 ## Resources
 [Beej's Guide to C Programming](https://beej.us/guide/bgc/)  
 [C Reference](https://en.cppreference.com/c)
-
 ## Library
 ### Libc functions
 
