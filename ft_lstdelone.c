@@ -15,8 +15,24 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst && lst->content)
-		del(lst->content);
+	del(lst->content);
 	free(lst);
 }
 
+// void	ft_del(void *content)
+// {
+// 	free(content);
+// }
+//
+// #include <stdio.h>
+//
+// int	main(void)
+// {
+// 	t_list	*lst;
+//
+// 	lst = ft_lstnew(ft_strdup("C"));
+// 	t_list	*node = ft_lstnew(ft_strdup("B"));
+// 	ft_lstadd_back(&lst, node);
+// 	ft_lstdelone(lst, &ft_del);
+// 	printf("%d", ft_lstsize(node));
+// }

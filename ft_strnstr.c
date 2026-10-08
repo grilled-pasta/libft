@@ -13,26 +13,27 @@
 #include <stddef.h>
 #include "libft.h"
 
-char	*ft_strnstr(char const *big, char const *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	char 	*p_big;
+	size_t	little_len;
 
+	p_big = (char *) big;
+	little_len = ft_strlen(little);
 	if (!*little)
-		return ((char *) big);
-	i = 0;
-	while (i < len && big[i])
+		return (p_big);
+	if (len > ft_strlen(big))
+		len = ft_strlen(big);
+	while (len >= little_len)
 	{
-		j = 0;
-		while (i + j < len && little[j] && big[i + j] == little[j])
-			j++;
-		if (!little[j])
-			return ((char *)(big + i));
-		i++;
+		if (ft_memcmp(p_big, little, little_len) == 0)
+			return (p_big);
+		p_big++;
+		len--;
 	}
 	return (NULL);
 }
-//
+
 // #include <stdio.h>
 //
 // int	main(void)

@@ -31,3 +31,29 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (res);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+//
+// void	ft_del(void *content)
+// {
+// 	free(content);
+// }
+//
+// void	*ft_f(void *content)
+// {
+// 	((char *) content)[0]++;
+// 	return (content);
+// }
+//
+// int	main(void)
+// {
+// 	t_list	*lst;
+// 	t_list	*res;
+//
+// 	lst = ft_lstnew(ft_strdup("C"));
+// 	ft_lstadd_front(&lst, ft_lstnew(ft_strdup("B")));
+// 	res = ft_lstmap(lst, &ft_f, &ft_del);
+// 	t_list *last = ft_lstlast(res);
+// 	printf("%s", (char *) last->content);
+// }

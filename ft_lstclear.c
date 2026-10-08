@@ -25,3 +25,21 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	free(*lst);
 }
+
+// void	ft_del(void *content)
+// {
+// 	free(content);
+// }
+//
+// #include <stdio.h>
+//
+// int	main(void)
+// {
+// 	t_list	*lst;
+//
+// 	lst = ft_lstnew(ft_strdup("C"));
+// 	ft_lstadd_front(&lst, ft_lstnew(ft_strdup("B")));
+// 	ft_lstclear(&lst, &ft_del);
+// 	t_list *last = ft_lstlast(lst);
+// 	printf("%d", ft_lstsize(lst));
+// }

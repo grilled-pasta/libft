@@ -11,10 +11,9 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(const char *s)
 {
 	size_t	length;
 	char	*res;

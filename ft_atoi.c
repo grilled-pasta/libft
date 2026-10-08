@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char const *nptr)
+int	ft_atoi(const char *nptr)
 {
-	int	res;
-	int	sign;
+	long	res;
+	int		sign;
 
 	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
 		nptr++;
@@ -38,4 +38,5 @@ int	ft_atoi(char const *nptr)
 // int	main(void)
 // {
 // 	printf("%d\n", ft_atoi(" \t-123a"));
+// 	printf("%d\n", ft_atoi("  \t-2147483648"));
 // }

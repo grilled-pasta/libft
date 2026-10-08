@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	char	*res;
 	size_t	start;
 	size_t	end;
-	char	*res;
 
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
