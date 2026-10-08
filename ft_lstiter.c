@@ -20,3 +20,21 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+// void	ft_f(void *content)
+// {
+// 	((char *) content)[0]++; 
+// }
+//
+// #include <stdio.h>
+//
+// int	main(void)
+// {
+// 	t_list	*lst;
+//
+// 	lst = ft_lstnew(ft_strdup("C"));
+// 	ft_lstadd_front(&lst, ft_lstnew(ft_strdup("B")));
+// 	ft_lstiter(lst, &ft_f);
+// 	t_list *last = ft_lstlast(lst);
+// 	printf("%s", (char *) last->content);
+// }

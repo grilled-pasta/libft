@@ -236,7 +236,8 @@ Searches the initial `n` bytes of the memory area pointed to by `s` for the firs
 - `n` - maximum number of bytes to scan.
 ##### Returns
 - A pointer to the matching byte or `NULL` if it was not found.
-> Passing `NULL` or `n` that is larger than the memory area results in undefined behavior. #### `ft_memcmp`
+> Passing `NULL` or `n` that is larger than the memory area results in undefined behavior. 
+#### `ft_memcmp`
 ```c 
 void	*ft_memcmp(const void *s1, const void *s2, size_t n);
 ```
@@ -435,4 +436,72 @@ Adds the node `new` at the beginning of the list.
 - `new` - pointer to the node to be added.
 ##### Returns
 - Nothing
-
+#### `ft_lstsize`
+```c 
+int		ft_lstsize(t_list *lst);
+```
+Counts the number of nodes in the list.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+##### Returns
+- Length of the list
+#### `ft_lstlast`
+```c 
+t_list	*ft_lstlast(t_list *lst);
+```
+Find the last node of the list.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+##### Returns
+- Pointer to the last node of the list.
+#### `ft_lstadd_back`
+```c 
+void	ft_lstadd_back(t_list **lst, t_list *new);
+```
+Adds the node `new` at the end of the list.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+- `new` - pointer to the node to be added.
+##### Returns
+- Nothing
+#### `ft_lstdelone`
+```c 
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+```
+Adds the node `new` at the end of the list.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+- `new` - pointer to the node to be added.
+##### Returns
+- Nothing
+#### `ft_lstclear`
+```c 
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+```
+Deletes and frees the given node and all its successors, using the function `del`.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+- `del` - pointer to the function used to delete the content of the node.
+##### Returns
+- Nothing
+#### `ft_lstiter`
+```c 
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+```
+Iterates through `lst` and applies the function `f` ot the content of each node.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+- `f` - pointer to the function to apply the content of the node.
+##### Returns
+- Nothing
+#### `ft_lstmap`
+```c 
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+```
+Iterates through the list `lst`, applies the function `f` to each node's content, and creates a new list resulting of the successive applications of the function `f`. The `del` function is used to delete the content of a node if needed.
+##### Parameters
+- `lst` - pointer to the first node of a list.
+- `f` - pointer to the function to apply the content of the node.
+- `del` - pointer to the function used to delete a node's content if needed.
+##### Returns
+- The new list, or `NULL` if allocation fails.
